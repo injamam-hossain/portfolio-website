@@ -87,6 +87,42 @@
         </div>
     </section>
 
+    <!-- Contact Section with Formspree Integration -->
+    <section id="contact" class="py-20 max-w-4xl mx-auto px-6">
+        <div class="text-center space-y-4 mb-12">
+            <h2 class="text-3xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent inline-block">Get In Touch</h2>
+            <p class="text-slate-400 max-w-lg mx-auto">Have a project, job opportunity, or just want to say hi? Drop a message below!</p>
+        </div>
+
+        <div class="bg-slate-900/90 border border-slate-800 p-8 rounded-2xl shadow-xl">
+            <form id="contact-form" action="https://formspree.io/f/xbldqpza" method="POST" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">Your Name</label>
+                        <input type="text" name="name" required placeholder="John Doe" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-indigo-500 transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">Your Email</label>
+                        <input type="email" name="email" required placeholder="john@example.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-indigo-500 transition">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-300 mb-2">Subject</label>
+                    <input type="text" name="subject" required placeholder="Collaboration Opportunity" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-indigo-500 transition">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-300 mb-2">Message</label>
+                    <textarea name="message" rows="4" required placeholder="Write your message here..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-indigo-500 transition"></textarea>
+                </div>
+                <button type="submit" id="submit-btn" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-indigo-600 to-cyan-600 font-semibold text-white shadow-lg shadow-indigo-500/25 hover:opacity-95 transition flex items-center justify-center gap-2">
+                    <span>Send Message</span>
+                    <i class="fa-solid fa-paper-plane text-sm"></i>
+                </button>
+                <div id="form-status" class="text-center text-sm font-medium hidden"></div>
+            </form>
+        </div>
+    </section>
+
     <!-- Floating AI Assistant Widget Script -->
     <script>
     (function () {
@@ -115,7 +151,7 @@
           email: "jisunkhan3938@gmail.com",
           github: "https://github.com",
           linkedin: "https://linkedin.com",
-          note: "You can reach out directly via email or the contact info provided.",
+          note: "You can reach out directly via email or the contact form.",
         },
         resumeUrl: "",
       };
@@ -359,6 +395,42 @@
       input.addEventListener("input", () => (sendBtn.disabled = !input.value.trim()));
       form.addEventListener("submit", (e) => { e.preventDefault(); ask(input.value); });
     })();
+    </script>
+
+    <!-- AJAX Script for Contact Form Handling -->
+    <script>
+        const contactForm = document.getElementById("contact-form");
+        const formStatus = document.getElementById("form-status");
+
+        contactForm.addEventListener("submit", async function(e) {
+            e.preventDefault();
+            const data = new FormData(e.target);
+            
+            formStatus.classList.remove("hidden", "text-emerald-400", "text-rose-400");
+            formStatus.classList.add("text-slate-400");
+            formStatus.textContent = "Sending message...";
+
+            try {
+                const response = await fetch(e.target.action, {
+                    method: 'POST',
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    formStatus.classList.remove("text-slate-400");
+                    formStatus.classList.add("text-emerald-400");
+                    formStatus.textContent = "Thanks! Your message has been sent successfully.";
+                    contactForm.reset();
+                } else {
+                    throw new Error("Form submission failed");
+                }
+            } catch (error) {
+                formStatus.classList.remove("text-slate-400");
+                formStatus.classList.add("text-rose-400");
+                formStatus.textContent = "Oops! There was a problem sending your message.";
+            }
+        });
     </script>
 </body>
 </html>
