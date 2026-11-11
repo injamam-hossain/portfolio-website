@@ -3,184 +3,314 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jisun Khan is a Computer Science Engineering student focused on front-end and full-stack web development.">
+    <meta name="theme-color" content="#020617">
     <title>Jisun Khan | Personal Portfolio</title>
-    <meta name="description" content="Portfolio of Jisun Khan, a Computer Science Engineering student focused on web development and modern web applications.">
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        html {
-            scroll-behavior: smooth;
+        html { scroll-behavior: smooth; }
+        body {
+            background:
+                radial-gradient(circle at top, rgba(59,130,246,0.18), transparent 30%),
+                linear-gradient(180deg, #020617 0%, #0f172a 100%);
         }
         .glass {
             background: rgba(15, 23, 42, 0.7);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(12px);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #60a5fa, #a78bfa, #22d3ee);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .shadow-glow {
+            box-shadow: 0 0 30px rgba(96, 165, 250, 0.18);
+        }
+        .project-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(96, 165, 250, 0.5);
         }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased">
 
-    <!-- Header / Navbar -->
-    <header class="fixed top-0 left-0 w-full bg-slate-900/80 backdrop-blur-md z-50 border-b border-slate-800">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold text-blue-500">Jisun<span class="text-white">.dev</span></a>
-            <nav class="space-x-6 hidden md:flex items-center">
+    <header class="fixed top-0 left-0 w-full z-50 border-b border-slate-800/80 glass">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-tight">
+                <span class="text-blue-500">Jisun</span><span class="text-white">.dev</span>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm text-slate-300">
                 <a href="#about" class="hover:text-blue-400 transition">About</a>
                 <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
                 <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
+                <a href="#experience" class="hover:text-blue-400 transition">Experience</a>
                 <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
             </nav>
-            <div class="hidden md:flex items-center gap-3">
+
+            <div class="hidden md:flex items-center gap-4 text-sm">
                 <a href="https://github.com/injamam-hossain" target="_blank" rel="noreferrer" class="text-slate-300 hover:text-blue-400 transition">GitHub</a>
                 <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" class="text-slate-300 hover:text-blue-400 transition">LinkedIn</a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-6 max-w-6xl mx-auto flex flex-col items-center text-center">
-        <div class="inline-flex items-center px-4 py-2 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-300 text-sm mb-6">
-            Available for web development opportunities
-        </div>
-        <h1 class="text-4xl md:text-6xl font-extrabold mb-4">
-            Hi, I'm <span class="text-blue-500">Jisun Khan</span>
-        </h1>
-        <p class="text-lg md:text-xl text-slate-400 max-w-2xl mb-8">
-            Computer Science Engineering Student at State University of Bangladesh. Passionate about Web Development and building modern web applications.
-        </p>
-        <div class="flex flex-wrap justify-center gap-4 mb-8">
-            <a href="#contact" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold transition">Contact Me</a>
-            <a href="#projects" class="bg-slate-800 hover:bg-slate-700 px-6 py-3 rounded-lg font-semibold border border-slate-700 transition">View Work</a>
-        </div>
-        <div class="flex flex-wrap justify-center gap-4 text-sm text-slate-300">
-            <a href="https://github.com/injamam-hossain" target="_blank" rel="noreferrer" class="hover:text-blue-400 transition">GitHub</a>
-            <a href="mailto:your.email@example.com" class="hover:text-blue-400 transition">Email</a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" class="hover:text-blue-400 transition">LinkedIn</a>
-        </div>
-    </section>
+    <main>
+        <section class="max-w-6xl mx-auto px-6 pt-36 pb-20">
+            <div class="grid md:grid-cols-[1.2fr_0.8fr] gap-10 items-center">
+                <div>
+                    <div class="inline-flex items-center px-4 py-2 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-300 text-sm mb-6">
+                        Available for web development opportunities
+                    </div>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-slate-900">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-8">About Me</h2>
-            <p class="text-slate-300 leading-relaxed text-center">
-                I am a dedicated CSE student continuously enhancing my skills in Front-End & Full-Stack Web Development. I enjoy solving real-world problems and creating clean, responsive user interfaces that deliver meaningful experiences.
-            </p>
-        </div>
-    </section>
+                    <h1 class="text-4xl md:text-6xl font-black leading-tight">
+                        Hi, I'm <span class="gradient-text">Jisun Khan</span>
+                    </h1>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-20 px-6">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12">Skills</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 text-center">
+                    <p class="mt-6 text-lg md:text-xl text-slate-400 max-w-2xl">
+                        Computer Science Engineering Student at State University of Bangladesh, passionate about building modern, clean, and impactful web experiences.
+                    </p>
+
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <a href="#contact" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold transition shadow-glow">Contact Me</a>
+                        <a href="#projects" class="bg-slate-800 hover:bg-slate-700 px-6 py-3 rounded-lg font-semibold border border-slate-700 transition">View Work</a>
+                    </div>
+
+                    <div class="mt-8 flex flex-wrap gap-5 text-sm text-slate-300">
+                        <a href="https://github.com/injamam-hossain" target="_blank" rel="noreferrer" class="hover:text-blue-400 transition">GitHub</a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" class="hover:text-blue-400 transition">LinkedIn</a>
+                        <a href="mailto:your.email@example.com" class="hover:text-blue-400 transition">Email</a>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full"></div>
+                    <div class="relative border border-slate-800 bg-slate-900/80 rounded-2xl p-6 shadow-2xl">
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="text-sm uppercase tracking-[0.2em] text-slate-400">Profile</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Open to work</span>
+                        </div>
+
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-xl font-bold text-white">JK</div>
+                            <div>
+                                <h2 class="text-xl font-bold">Jisun Khan</h2>
+                                <p class="text-slate-400">Front-End & Full-Stack Developer</p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-4 text-center">
+                            <div class="bg-slate-950 border border-slate-800 rounded-xl p-4">
+                                <p class="text-2xl font-bold text-blue-400">2+</p>
+                                <p class="text-xs text-slate-400 mt-1">Years</p>
+                            </div>
+                            <div class="bg-slate-950 border border-slate-800 rounded-xl p-4">
+                                <p class="text-2xl font-bold text-blue-400">10+</p>
+                                <p class="text-xs text-slate-400 mt-1">Projects</p>
+                            </div>
+                            <div class="bg-slate-950 border border-slate-800 rounded-xl p-4">
+                                <p class="text-2xl font-bold text-blue-400">100%</p>
+                                <p class="text-xs text-slate-400 mt-1">Driven</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-slate-900/60">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <p class="text-sm uppercase tracking-[0.3em] text-blue-400 mb-3">About</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">A developer focused on modern web experiences</h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="text-slate-300 leading-relaxed">
+                        I am a dedicated CSE student continuously improving my skills in Front-End and Full-Stack Web Development. I enjoy solving real-world problems and transforming ideas into clean, responsive, and user-friendly interfaces.
+                        <br><br>
+                        My goal is to build products that are not only visually appealing but also fast, functional, and easy to use across devices.
+                    </div>
+
+                    <div class="grid gap-4">
+                        <div class="bg-slate-950 border border-slate-800 rounded-xl p-5">
+                            <p class="text-slate-400 text-sm">Current focus</p>
+                            <p class="mt-2 text-lg font-semibold text-white">Responsive Web Apps & UI Engineering</p>
+                        </div>
+                        <div class="bg-slate-950 border border-slate-800 rounded-xl p-5">
+                            <p class="text-slate-400 text-sm">Learning</p>
+                            <p class="mt-2 text-lg font-semibold text-white">Advanced JavaScript, React Ecosystem, and API Integration</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-20 max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <p class="text-sm uppercase tracking-[0.3em] text-blue-400 mb-3">Skills</p>
+                <h2 class="text-3xl md:text-4xl font-bold">Tools and technologies I work with</h2>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+                <div class="text-center bg-slate-900 border border-slate-800 rounded-xl p-5 hover:border-blue-500/50 transition">
                     <p class="text-lg font-semibold text-blue-400">HTML5</p>
                 </div>
-                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 text-center">
+                <div class="text-center bg-slate-900 border border-slate-800 rounded-xl p-5 hover:border-blue-500/50 transition">
                     <p class="text-lg font-semibold text-blue-400">CSS3</p>
                 </div>
-                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 text-center">
+                <div class="text-center bg-slate-900 border border-slate-800 rounded-xl p-5 hover:border-blue-500/50 transition">
                     <p class="text-lg font-semibold text-blue-400">JavaScript</p>
                 </div>
-                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 text-center">
-                    <p class="text-lg font-semibold text-blue-400">Tailwind CSS</p>
+                <div class="text-center bg-slate-900 border border-slate-800 rounded-xl p-5 hover:border-blue-500/50 transition">
+                    <p class="text-lg font-semibold text-blue-400">Tailwind</p>
                 </div>
-                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 text-center">
+                <div class="text-center bg-slate-900 border border-slate-800 rounded-xl p-5 hover:border-blue-500/50 transition">
                     <p class="text-lg font-semibold text-blue-400">React</p>
                 </div>
-                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 text-center">
+                <div class="text-center bg-slate-900 border border-slate-800 rounded-xl p-5 hover:border-blue-500/50 transition">
                     <p class="text-lg font-semibold text-blue-400">Node.js</p>
                 </div>
-                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 text-center">
+                <div class="text-center bg-slate-900 border border-slate-800 rounded-xl p-5 hover:border-blue-500/50 transition">
                     <p class="text-lg font-semibold text-blue-400">MongoDB</p>
                 </div>
-                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 text-center">
+                <div class="text-center bg-slate-900 border border-slate-800 rounded-xl p-5 hover:border-blue-500/50 transition">
                     <p class="text-lg font-semibold text-blue-400">Git</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-slate-900">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12">Featured Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-slate-950 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:-translate-y-1 transition duration-200">
-                    <div class="h-40 bg-gradient-to-br from-blue-600 to-indigo-700"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3">Portfolio Website</h3>
-                        <p class="text-slate-400 mb-4">A personal portfolio built with HTML, Tailwind CSS, and modern responsive design.</p>
-                        <a href="#" class="text-blue-400 hover:text-blue-300">View Project →</a>
-                    </div>
+        <section id="projects" class="py-20 bg-slate-900/60">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <p class="text-sm uppercase tracking-[0.3em] text-blue-400 mb-3">Projects</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Featured work</h2>
                 </div>
 
-                <div class="bg-slate-950 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:-translate-y-1 transition duration-200">
-                    <div class="h-40 bg-gradient-to-br from-cyan-600 to-blue-700"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3">Business Landing Page</h3>
-                        <p class="text-slate-400 mb-4">Responsive business website focused on conversion, branding, and modern UI.</p>
-                        <a href="#" class="text-blue-400 hover:text-blue-300">View Project →</a>
-                    </div>
-                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <article class="project-card transition duration-300 border border-slate-800 bg-slate-950 rounded-2xl overflow-hidden">
+                        <div class="h-40 bg-gradient-to-br from-blue-600 to-indigo-700"></div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Portfolio Website</h3>
+                            <p class="text-slate-400 mb-5">A professional portfolio built with responsive design, modern colors, and polished UI.</p>
+                            <div class="flex flex-wrap gap-2 mb-5">
+                                <span class="text-xs px-2 py-1 rounded-full bg-slate-800 text-slate-300">HTML</span>
+                                <span class="text-xs px-2 py-1 rounded-full bg-slate-800 text-slate-300">Tailwind</span>
+                            </div>
+                            <a href="#" class="text-blue-400 hover:text-blue-300">View project →</a>
+                        </div>
+                    </article>
 
-                <div class="bg-slate-950 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:-translate-y-1 transition duration-200">
-                    <div class="h-40 bg-gradient-to-br from-violet-600 to-fuchsia-700"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3">Web App UI</h3>
-                        <p class="text-slate-400 mb-4">A clean user interface concept for a dashboard or SaaS application.</p>
-                        <a href="#" class="text-blue-400 hover:text-blue-300">View Project →</a>
-                    </div>
+                    <article class="project-card transition duration-300 border border-slate-800 bg-slate-950 rounded-2xl overflow-hidden">
+                        <div class="h-40 bg-gradient-to-br from-cyan-500 to-blue-700"></div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Business Landing Page</h3>
+                            <p class="text-slate-400 mb-5">A conversion-focused landing page concept for service-based businesses.</p>
+                            <div class="flex flex-wrap gap-2 mb-5">
+                                <span class="text-xs px-2 py-1 rounded-full bg-slate-800 text-slate-300">CSS</span>
+                                <span class="text-xs px-2 py-1 rounded-full bg-slate-800 text-slate-300">UI/UX</span>
+                            </div>
+                            <a href="#" class="text-blue-400 hover:text-blue-300">View project →</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card transition duration-300 border border-slate-800 bg-slate-950 rounded-2xl overflow-hidden">
+                        <div class="h-40 bg-gradient-to-br from-violet-600 to-fuchsia-700"></div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Web App Dashboard</h3>
+                            <p class="text-slate-400 mb-5">A UX-driven dashboard concept designed for a modern digital product interface.</p>
+                            <div class="flex flex-wrap gap-2 mb-5">
+                                <span class="text-xs px-2 py-1 rounded-full bg-slate-800 text-slate-300">React</span>
+                                <span class="text-xs px-2 py-1 rounded-full bg-slate-800 text-slate-300">Design</span>
+                            </div>
+                            <a href="#" class="text-blue-400 hover:text-blue-300">View project →</a>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-slate-950">
-        <div class="max-w-4xl mx-auto px-6">
+        <section id="experience" class="py-20 max-w-6xl mx-auto px-6">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-2">Get In Touch</h2>
-                <p class="text-slate-400">Feel free to reach out for collaborations or just a friendly hello.</p>
+                <p class="text-sm uppercase tracking-[0.3em] text-blue-400 mb-3">Experience</p>
+                <h2 class="text-3xl md:text-4xl font-bold">Building, learning, improving</h2>
             </div>
 
-            <form id="contact-form" action="https://formspree.io/f/mvkaorqo" method="POST" class="space-y-6 bg-slate-900 p-8 rounded-xl shadow-lg border border-slate-800">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- Name Field -->
-                    <div>
-                        <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Your Name</label>
-                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-lg focus:outline-none focus:border-blue-500 text-white" placeholder="Your name">
+            <div class="relative border-l border-slate-700 ml-3">
+                <div class="mb-8 pl-6 relative">
+                    <span class="absolute -left-[1.62rem] top-1.5 w-3 h-3 rounded-full bg-blue-500 border-4 border-slate-950"></span>
+                    <p class="text-sm text-slate-400">2024 - Present</p>
+                    <h3 class="text-xl font-semibold mt-2">Front-End Web Developer</h3>
+                    <p class="text-slate-300 mt-2">Creating responsive websites and polished user interfaces with HTML, CSS, Tailwind, and JavaScript.</p>
+                </div>
+
+                <div class="mb-8 pl-6 relative">
+                    <span class="absolute -left-[1.62rem] top-1.5 w-3 h-3 rounded-full bg-blue-500 border-4 border-slate-950"></span>
+                    <p class="text-sm text-slate-400">2023 - 2024</p>
+                    <h3 class="text-xl font-semibold mt-2">Self-Learning & Personal Projects</h3>
+                    <p class="text-slate-300 mt-2">Focused on UI design, component architecture, and building practical web applications.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 bg-slate-950">
+            <div class="max-w-5xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <p class="text-sm uppercase tracking-[0.3em] text-blue-400 mb-3">Contact</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Let’s build something great together</h2>
+                </div>
+
+                <div class="grid md:grid-cols-[0.8fr_1.2fr] gap-8">
+                    <div class="space-y-5 bg-slate-900 border border-slate-800 rounded-2xl p-6">
+                        <div>
+                            <p class="text-slate-400 text-sm">Email</p>
+                            <a href="mailto:your.email@example.com" class="mt-2 inline-block text-lg text-white hover:text-blue-400 transition">your.email@example.com</a>
+                        </div>
+                        <div>
+                            <p class="text-slate-400 text-sm">Location</p>
+                            <p class="mt-2 text-lg text-white">Bangladesh</p>
+                        </div>
+                        <div>
+                            <p class="text-slate-400 text-sm">Social</p>
+                            <div class="mt-2 flex gap-4">
+                                <a href="https://github.com/injamam-hossain" target="_blank" rel="noreferrer" class="text-blue-400 hover:text-blue-300">GitHub</a>
+                                <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" class="text-blue-400 hover:text-blue-300">LinkedIn</a>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Email Field -->
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Your Email</label>
-                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-lg focus:outline-none focus:border-blue-500 text-white" placeholder="Your email">
-                    </div>
-                </div>
 
-                <!-- Subject Field -->
-                <div>
-                    <label for="subject" class="block text-sm font-medium text-slate-300 mb-2">Subject</label>
-                    <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-lg focus:outline-none focus:border-blue-500 text-white" placeholder="Subject">
-                </div>
+                    <form id="contact-form" action="https://formspree.io/f/mvkaorqo" method="POST" class="space-y-6 bg-slate-900 p-8 rounded-2xl border border-slate-800 shadow-xl">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Your Name</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-lg focus:outline-none focus:border-blue-500 text-white" placeholder="Your name">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Your Email</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-lg focus:outline-none focus:border-blue-500 text-white" placeholder="your@email.com">
+                            </div>
+                        </div>
 
-                <!-- Message Field -->
-                <div>
-                    <label for="message" class="block text-sm font-medium text-slate-300 mb-2">Message</label>
-                    <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-lg focus:outline-none focus:border-blue-500 text-white" placeholder="Your message"></textarea>
-                </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-slate-300 mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-lg focus:outline-none focus:border-blue-500 text-white" placeholder="Project inquiry">
+                        </div>
 
-                <!-- Submit Button -->
-                <div>
-                    <button type="submit" class="w-full py-3 px-6 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold rounded-lg transition duration-200">
-                        Send Message 🚀
-                    </button>
-                </div>
-            </form>
-        </div>
-    </section>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-slate-300 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-lg focus:outline-none focus:border-blue-500 text-white" placeholder="Tell me about your project..."></textarea>
+                        </div>
 
-    <!-- Footer -->
+                        <button type="submit" class="w-full py-3 px-6 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold rounded-lg transition duration-200">
+                            Send Message 🚀
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer class="py-6 border-t border-slate-800 text-center text-slate-500 text-sm">
         <p>&copy; 2026 Jisun Khan. All rights reserved.</p>
     </footer>
