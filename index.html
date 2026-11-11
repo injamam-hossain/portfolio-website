@@ -1,436 +1,99 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jisun Khan — Computer Science Student & Full-Stack Developer</title>
+    <title>Jisun Khan | Personal Portfolio</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            50: '#eef2ff',
-                            100: '#e0e7ff',
-                            500: '#6366f1',
-                            600: '#4f46e5',
-                            700: '#4338ca',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white">
+<body class="bg-slate-950 text-slate-100 font-sans antialiased">
 
     <!-- Header / Navbar -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="#" class="text-xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">Jisun.dev</a>
-            <nav class="hidden md:flex items-center gap-8 text-sm text-slate-300">
-                <a href="#about" class="hover:text-indigo-400 transition">About</a>
-                <a href="#skills" class="hover:text-indigo-400 transition">Skills</a>
-                <a href="#projects" class="hover:text-indigo-400 transition">Projects</a>
-                <a href="#contact" class="hover:text-indigo-400 transition">Contact</a>
+    <header class="fixed top-0 left-0 w-full bg-slate-900/80 backdrop-blur-md z-50 border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-blue-500">Jisun<span class="text-white">.dev</span></a>
+            <nav class="space-x-6 hidden md:block">
+                <a href="#about" class="hover:text-blue-400 transition">About</a>
+                <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
+                <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
+                <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="min-h-screen pt-32 pb-16 flex items-center max-w-6xl mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
-            <div class="space-y-6">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-medium">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                    Open to internships & collaboration
-                </div>
-                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
-                    Hi, I'm <span class="bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">Jisun Khan</span>
-                </h1>
-                <p class="text-lg text-slate-400">
-                    A Computer Science Student at State University of Bangladesh who loves turning ideas into clean, fast and useful software, from responsive interfaces to reliable back-end services.
-                </p>
-                <div class="flex items-center gap-4 pt-2">
-                    <a href="#projects" class="px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-cyan-600 font-medium text-white shadow-lg shadow-indigo-500/25 hover:opacity-95 transition">
-                        View my work <i class="fa-solid fa-arrow-right ml-2"></i>
-                    </a>
-                    <a href="#contact" class="px-6 py-3 rounded-xl bg-slate-900 border border-slate-800 font-medium text-slate-200 hover:bg-slate-800 transition">
-                        Get in touch
-                    </a>
-                </div>
-                <div class="flex items-center gap-4 pt-4 text-slate-400 text-xl">
-                    <a href="https://github.com" target="_blank" class="hover:text-indigo-400 transition"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://linkedin.com" target="_blank" class="hover:text-indigo-400 transition"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="mailto:jisunkhan3938@gmail.com" class="hover:text-indigo-400 transition"><i class="fa-solid fa-envelope"></i></a>
-                </div>
-            </div>
-            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-2xl font-mono text-xs text-slate-300">
-                <div class="flex items-center gap-2 pb-4 border-b border-slate-800 mb-4">
-                    <span class="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>
-                    <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
-                    <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
-                    <span class="text-slate-500 ml-2">profile.js</span>
-                </div>
-                <pre class="overflow-x-auto text-indigo-300"><code>const jisun = {
-  role: "CSE Student & Developer",
-  university: "State University of Bangladesh",
-  department: "Department of CSE",
-  stack: ["JavaScript", "HTML/CSS", "Python", "React"],
-  focus: "Full-stack web development & AI",
-  status: "Building awesome web apps"
-};</code></pre>
-            </div>
+    <section class="pt-32 pb-20 px-6 max-w-6xl mx-auto flex flex-col items-center text-center">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4">
+            Hi, I'm <span class="text-blue-500">Jisun Khan</span>
+        </h1>
+        <p class="text-lg md:text-xl text-slate-400 max-w-2xl mb-8">
+            Computer Science Engineering Student at State University of Bangladesh. Passionate about Web Development and building modern web applications.
+        </p>
+        <div class="flex gap-4">
+            <a href="#contact" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold transition">Contact Me</a>
+            <a href="#projects" class="bg-slate-800 hover:bg-slate-700 px-6 py-3 rounded-lg font-semibold border border-slate-700 transition">View Work</a>
         </div>
     </section>
 
-    <!-- Contact Section with Formspree Integration -->
-    <section id="contact" class="py-20 max-w-4xl mx-auto px-6">
-        <div class="text-center space-y-4 mb-12">
-            <h2 class="text-3xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent inline-block">Get In Touch</h2>
-            <p class="text-slate-400 max-w-lg mx-auto">Have a project, job opportunity, or just want to say hi? Drop a message below!</p>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-slate-900">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">About Me</h2>
+            <p class="text-slate-300 leading-relaxed text-center">
+                I am a dedicated CSE student continuously enhancing my skills in Front-End & Full-Stack Web Development. I enjoy solving real-world problems and creating clean, responsive user interfaces.
+            </p>
         </div>
+    </section>
 
-        <div class="bg-slate-900/90 border border-slate-800 p-8 rounded-2xl shadow-xl">
-            <form id="contact-form" action="https://formspree.io/f/xyewywng" method="POST" class="space-y-6">
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-slate-950">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-2">Get In Touch</h2>
+                <p class="text-slate-400">Feel free to reach out for collaborations or just a friendly hello.</p>
+            </div>
+
+            <form id="contact-form" action="https://formspree.io/f/xyewywng" method="POST" class="space-y-6 bg-slate-900 p-8 rounded-xl shadow-lg border border-slate-800">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Name Field -->
                     <div>
-                        <label class="block text-sm font-medium text-slate-300 mb-2">Your Name</label>
-                        <input type="text" name="name" required placeholder="John Doe" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500/60">
+                        <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Your Name</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-lg focus:outline-none focus:border-blue-500 text-white" placeholder="Jisun Khan">
                     </div>
+                    <!-- Email Field -->
                     <div>
-                        <label class="block text-sm font-medium text-slate-300 mb-2">Your Email</label>
-                        <input type="email" name="email" required placeholder="john@example.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500/60">
+                        <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Your Email</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-lg focus:outline-none focus:border-blue-500 text-white" placeholder="example@gmail.com">
                     </div>
                 </div>
+
+                <!-- Subject Field -->
                 <div>
-                    <label class="block text-sm font-medium text-slate-300 mb-2">Subject</label>
-                    <input type="text" name="subject" required placeholder="Collaboration Opportunity" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500/60">
+                    <label for="subject" class="block text-sm font-medium text-slate-300 mb-2">Subject</label>
+                    <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-lg focus:outline-none focus:border-blue-500 text-white" placeholder="Project Inquiry">
                 </div>
+
+                <!-- Message Field -->
                 <div>
-                    <label class="block text-sm font-medium text-slate-300 mb-2">Message</label>
-                    <textarea name="message" rows="4" required placeholder="Write your message here..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500/60"></textarea>
+                    <label for="message" class="block text-sm font-medium text-slate-300 mb-2">Message</label>
+                    <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-lg focus:outline-none focus:border-blue-500 text-white" placeholder="Write your message here..."></textarea>
                 </div>
-                <button type="submit" id="submit-btn" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-indigo-600 to-cyan-600 font-semibold text-white shadow-lg shadow-indigo-500/25 hover:opacity-95 transition">
-                    <span>Send Message</span>
-                    <i class="fa-solid fa-paper-plane text-sm"></i>
-                </button>
-                <div id="form-status" class="text-center text-sm font-medium hidden"></div>
+
+                <!-- Submit Button -->
+                <div>
+                    <button type="submit" class="w-full py-3 px-6 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold rounded-lg transition duration-300 shadow-md">
+                        Send Message 🚀
+                    </button>
+                </div>
             </form>
         </div>
     </section>
 
-    <!-- Floating AI Assistant Widget Script -->
-    <script>
-    (function () {
-      "use strict";
-      if (window.__jisunChatLoaded) return;
-      window.__jisunChatLoaded = true;
+    <!-- Footer -->
+    <footer class="py-6 border-t border-slate-800 text-center text-slate-500 text-sm">
+        <p>&copy; 2026 Jisun Khan. All rights reserved.</p>
+    </footer>
 
-      const PROFILE = {
-        name: "Jisun Khan",
-        assistantName: "Jisun's AI Assistant",
-        greeting: "Hi! 👋 I'm Jisun's AI assistant. Ask me about Jisun's computer science background at State University of Bangladesh, skills, or projects.",
-        about: "Jisun Khan is a computer science student at State University of Bangladesh (CSE Department) who enjoys building clean, fast and useful software.",
-        education: "Jisun studies Computer Science and Engineering (CSE) at State University of Bangladesh. Core coursework includes data structures & algorithms, software engineering, databases, and computer networks.",
-        skills: {
-          languages: ["JavaScript", "Python", "C++", "SQL"],
-          frontend: ["HTML5", "CSS3", "JavaScript (ES6+)", "Tailwind CSS", "Responsive design"],
-          backend: ["Node.js", "Express", "REST APIs", "MySQL"],
-          tools: ["Git & GitHub", "VS Code", "Netlify", "Canva"],
-          aiml: ["AI Prompt-Driven Development", "Basic Automation Workflows"],
-          cs: ["Data structures & algorithms", "OOP", "Databases", "Computer networks"],
-        },
-        projects: "Jisun has built interactive web apps, a modern personal portfolio, and AI-assisted automation projects. Check out the projects section of this page!",
-        experience: "Focused on self-directed full-stack development, prompt-driven engineering, and modern web deployment pipelines.",
-        availability: "Jisun is open to internships, freelance projects, and tech collaborations.",
-        contact: {
-          email: "jisunkhan3938@gmail.com",
-          github: "https://github.com",
-          linkedin: "https://linkedin.com",
-          note: "You can reach out directly via email or the contact form.",
-        },
-        resumeUrl: "",
-      };
-
-      const QUICK_REPLIES = [
-        "Tell me about Jisun",
-        "What are Jisun's skills?",
-        "Education",
-        "Projects",
-        "Contact",
-      ];
-
-      const list = (arr) => arr.join(", ");
-      const contactText = () => {
-        const c = PROFILE.contact;
-        const parts = [];
-        if (c.email) parts.push("📧 " + c.email);
-        if (c.github) parts.push("💻 " + c.github);
-        if (c.linkedin) parts.push("🔗 " + c.linkedin);
-        return ((parts.length ? "Here's how to reach Jisun:\n" + parts.join("\n") + "\n" : "") + c.note);
-      };
-
-      const INTENTS = [
-        {
-          name: "greeting",
-          keys: ["hi", "hello", "hey", "howdy", "good morning", "good evening", "greetings", "sup"],
-          reply: () => "Hello! 😊 What would you like to know about Jisun? Try asking about skills, education or projects.",
-        },
-        {
-          name: "about",
-          keys: ["who is", "about", "background", "introduce", "tell me about", "bio", "yourself", "summary"],
-          reply: () => PROFILE.about,
-        },
-        {
-          name: "education",
-          keys: ["education", "study", "studies", "degree", "university", "college", "school", "course", "state university", "cse", "department"],
-          reply: () => PROFILE.education,
-        },
-        {
-          name: "skills",
-          keys: ["skill", "skills", "tech stack", "stack", "technologies", "languages", "python", "javascript"],
-          reply: () => {
-            const s = PROFILE.skills;
-            return "Here's a snapshot of Jisun's skills:\n• Languages: " + list(s.languages) + "\n• Front-end: " + list(s.frontend) + "\n• Back-end: " + list(s.backend) + "\n• Tools: " + list(s.tools) + "\n• AI/ML: " + list(s.aiml);
-          },
-        },
-        {
-          name: "projects",
-          keys: ["project", "projects", "portfolio", "built", "build", "app"],
-          reply: () => PROFILE.projects,
-        },
-        {
-          name: "availability",
-          keys: ["hire", "hiring", "available", "availability", "open to", "collaborat", "freelance"],
-          reply: () => PROFILE.availability + "\n" + contactText(),
-        },
-        {
-          name: "contact",
-          keys: ["contact", "email", "e-mail", "reach", "linkedin", "message", "get in touch", "connect"],
-          reply: contactText,
-        },
-      ];
-
-      const FALLBACK = "I'm not sure about that one 🤔. Try asking about Jisun's computer science education at State University, skills, projects or contact details!";
-
-      function normalize(s) {
-        return " " + s.toLowerCase().replace(/[^a-z0-9+#\s-]/g, " ").replace(/\s+/g, " ").trim() + " ";
-      }
-
-      function getReply(input) {
-        const text = normalize(input);
-        let best = null;
-        let bestScore = 0;
-        for (const intent of INTENTS) {
-          let score = 0;
-          for (const k of intent.keys) {
-            const hit = k.length <= 3 ? text.includes(" " + k + " ") : text.includes(k);
-            if (hit) score += k.length > 5 ? 2 : 1;
-          }
-          if (score > bestScore) {
-            bestScore = score;
-            best = intent;
-          }
-        }
-        return best && bestScore > 0 ? best.reply() : FALLBACK;
-      }
-
-      const CSS = `
-      .jk-chat, .jk-chat * { box-sizing: border-box; }
-      .jk-chat {
-        --jk-bg: #0b0f19; --jk-panel: #111827; --jk-panel-2: #1a2235;
-        --jk-border: rgba(255,255,255,.08); --jk-text: #e5e7eb; --jk-muted: #94a3b8;
-        --jk-accent: #6366f1; --jk-accent-2: #22d3ee;
-        position: fixed; right: 24px; bottom: 24px; z-index: 2147483000;
-        font-family: Inter, system-ui, sans-serif; font-size: 14px; line-height: 1.5; color: var(--jk-text);
-      }
-      .jk-chat__fab {
-        width: 60px; height: 60px; border-radius: 50%; border: 0; cursor: pointer;
-        display: grid; place-items: center; color: #fff;
-        background: linear-gradient(135deg, var(--jk-accent), var(--jk-accent-2));
-        box-shadow: 0 10px 30px rgba(99,102,241,.45);
-        transition: transform .2s ease;
-      }
-      .jk-chat__fab:hover { transform: translateY(-2px) scale(1.05); }
-      .jk-chat__fab svg { width: 28px; height: 28px; position: absolute; transition: transform .25s ease, opacity .2s ease; }
-      .jk-chat__fab .jk-icon-close { opacity: 0; transform: rotate(-90deg) scale(.6); }
-      .jk-chat.is-open .jk-chat__fab svg.jk-icon-chat { opacity: 0; transform: rotate(90deg) scale(.6); }
-      .jk-chat.is-open .jk-chat__fab svg.jk-icon-close { opacity: 1; transform: none; }
-      .jk-chat__window {
-        position: absolute; right: 0; bottom: 76px; width: 380px; max-width: calc(100vw - 32px);
-        height: 560px; max-height: calc(100vh - 120px); display: flex; flex-direction: column; overflow: hidden;
-        background: var(--jk-bg); border: 1px solid var(--jk-border); border-radius: 20px;
-        box-shadow: 0 25px 60px rgba(0,0,0,.6); opacity: 0; transform: translateY(16px) scale(.96);
-        pointer-events: none; visibility: hidden; transition: opacity .22s ease, transform .22s ease;
-      }
-      .jk-chat.is-open .jk-chat__window { opacity: 1; transform: none; pointer-events: auto; visibility: visible; }
-      .jk-chat__header {
-        display: flex; align-items: center; gap: 12px; padding: 14px 16px;
-        background: linear-gradient(135deg, rgba(99,102,241,.25), rgba(34,211,238,.12)), var(--jk-panel);
-        border-bottom: 1px solid var(--jk-border);
-      }
-      .jk-chat__avatar {
-        width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center;
-        background: linear-gradient(135deg, var(--jk-accent), var(--jk-accent-2)); color: #fff; font-weight: 700;
-      }
-      .jk-chat__title { font-weight: 600; font-size: 15px; margin: 0; }
-      .jk-chat__status { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--jk-muted); }
-      .jk-chat__status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #22c55e; }
-      .jk-chat__close { margin-left: auto; background: transparent; border: 0; color: var(--jk-muted); cursor: pointer; width: 32px; height: 32px; border-radius: 8px; display: grid; place-items: center; }
-      .jk-chat__close:hover { background: rgba(255,255,255,.08); color: #fff; }
-      .jk-chat__messages { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 10px; }
-      .jk-msg { max-width: 85%; padding: 10px 14px; border-radius: 16px; white-space: pre-wrap; word-wrap: break-word; }
-      .jk-msg a { color: var(--jk-accent-2); text-decoration: underline; }
-      .jk-msg--bot { align-self: flex-start; background: var(--jk-panel-2); border: 1px solid var(--jk-border); border-bottom-left-radius: 4px; }
-      .jk-msg--user { align-self: flex-end; color: #fff; background: linear-gradient(135deg, var(--jk-accent), #7c3aed); border-bottom-right-radius: 4px; }
-      .jk-typing { display: inline-flex; gap: 4px; align-items: center; padding: 14px; }
-      .jk-typing span { width: 6px; height: 6px; border-radius: 50%; background: var(--jk-muted); animation: jk-bounce 1.2s infinite; }
-      .jk-typing span:nth-child(2) { animation-delay: .15s; }
-      .jk-typing span:nth-child(3) { animation-delay: .3s; }
-      @keyframes jk-bounce { 0%, 60%, 100% { transform: translateY(0); opacity: .5; } 30% { transform: translateY(-5px); opacity: 1; } }
-      .jk-chat__chips { display: flex; gap: 8px; padding: 0 16px 12px; overflow-x: auto; scrollbar-width: none; }
-      .jk-chip { flex: none; cursor: pointer; font: inherit; font-size: 12.5px; color: var(--jk-text); background: transparent; border: 1px solid rgba(99,102,241,.5); border-radius: 999px; padding: 6px 12px; transition: background .2s ease, border-color .2s ease; }
-      .jk-chip:hover { background: rgba(99,102,241,.2); border-color: var(--jk-accent); }
-      .jk-chat__form { display: flex; gap: 8px; padding: 12px; background: var(--jk-panel); border-top: 1px solid var(--jk-border); }
-      .jk-chat__input { flex: 1; min-width: 0; font: inherit; color: var(--jk-text); background: var(--jk-bg); border: 1px solid var(--jk-border); border-radius: 12px; padding: 10px 14px; outline: none; }
-      .jk-chat__input:focus { border-color: var(--jk-accent); box-shadow: 0 0 0 3px rgba(99,102,241,.25); }
-      .jk-chat__send { flex: none; width: 42px; border: 0; border-radius: 12px; cursor: pointer; color: #fff; display: grid; place-items: center; background: linear-gradient(135deg, var(--jk-accent), var(--jk-accent-2)); }
-      .jk-chat__send:disabled { opacity: .4; cursor: not-allowed; }
-      `;
-
-      const style = document.createElement("style");
-      style.textContent = CSS;
-      document.head.appendChild(style);
-
-      const root = document.createElement("div");
-      root.className = "jk-chat";
-      root.innerHTML = `
-        <section class="jk-chat__window" id="jk-chat-window" aria-hidden="true">
-          <header class="jk-chat__header">
-            <div class="jk-chat__avatar">${PROFILE.name.charAt(0)}</div>
-            <div>
-              <p class="jk-chat__title">${PROFILE.assistantName}</p>
-              <div class="jk-chat__status">Online</div>
-            </div>
-            <button class="jk-chat__close" type="button" aria-label="Close chat">✕</button>
-          </header>
-          <div class="jk-chat__messages" role="log"></div>
-          <div class="jk-chat__chips"></div>
-          <form class="jk-chat__form">
-            <input class="jk-chat__input" type="text" placeholder="Ask about Jisun…" maxlength="300" />
-            <button class="jk-chat__send" type="submit" disabled>➤</button>
-          </form>
-        </section>
-        <button class="jk-chat__fab" type="button" aria-label="Open AI assistant chat">
-          <svg class="jk-icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>
-          <svg class="jk-icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 6l12 12M18 6L6 18"/></svg>
-        </button>`;
-      document.body.appendChild(root);
-
-      const $ = (sel) => root.querySelector(sel);
-      const fab = $(".jk-chat__fab"), win = $(".jk-chat__window"), messages = $(".jk-chat__messages"), chips = $(".jk-chat__chips"), form = $(".jk-chat__form"), input = $(".jk-chat__input"), sendBtn = $(".jk-chat__send");
-
-      let greeted = false, busy = false;
-
-      function addMessage(text, who) {
-        const el = document.createElement("div");
-        el.className = "jk-msg jk-msg--" + who;
-        el.textContent = text;
-        messages.appendChild(el);
-        messages.scrollTop = messages.scrollHeight;
-      }
-
-      function showTyping() {
-        const el = document.createElement("div");
-        el.className = "jk-msg jk-msg--bot jk-typing";
-        el.innerHTML = "<span></span><span></span><span></span>";
-        messages.appendChild(el);
-        messages.scrollTop = messages.scrollHeight;
-        return el;
-      }
-
-      function ask(text) {
-        text = text.trim();
-        if (!text || busy) return;
-        busy = true;
-        addMessage(text, "user");
-        input.value = "";
-        sendBtn.disabled = true;
-
-        const typing = showTyping();
-        const reply = getReply(text);
-        setTimeout(() => {
-          typing.remove();
-          addMessage(reply, "bot");
-          busy = false;
-          input.focus();
-        }, 800);
-      }
-
-      function setOpen(open) {
-        root.classList.toggle("is-open", open);
-        win.setAttribute("aria-hidden", String(!open));
-        if (open && !greeted) {
-          greeted = true;
-          addMessage(PROFILE.greeting, "bot");
-        }
-        if (open) setTimeout(() => input.focus(), 250);
-      }
-
-      QUICK_REPLIES.forEach((q) => {
-        const b = document.createElement("button");
-        b.type = "button";
-        b.className = "jk-chip";
-        b.textContent = q;
-        b.addEventListener("click", () => ask(q));
-        chips.appendChild(b);
-      });
-
-      fab.addEventListener("click", () => setOpen(!root.classList.contains("is-open")));
-      $(".jk-chat__close").addEventListener("click", () => setOpen(false));
-      input.addEventListener("input", () => (sendBtn.disabled = !input.value.trim()));
-      form.addEventListener("submit", (e) => { e.preventDefault(); ask(input.value); });
-    })();
-    </script>
-
-    <!-- AJAX Script for Contact Form Handling -->
-    <script>
-        const contactForm = document.getElementById("contact-form");
-        const formStatus = document.getElementById("form-status");
-
-        contactForm.addEventListener("submit", async function(e) {
-            e.preventDefault();
-            const data = new FormData(e.target);
-            
-            formStatus.classList.remove("hidden", "text-emerald-400", "text-rose-400");
-            formStatus.classList.add("text-slate-400");
-            formStatus.textContent = "Sending message...";
-
-            try {
-                const response = await fetch(e.target.action, {
-                    method: 'POST',
-                    body: data,
-                    headers: { 'Accept': 'application/json' }
-                });
-
-                if (response.ok) {
-                    formStatus.classList.remove("text-slate-400");
-                    formStatus.classList.add("text-emerald-400");
-                    formStatus.textContent = "Thanks! Your message has been sent successfully.";
-                    contactForm.reset();
-                } else {
-                    throw new Error("Form submission failed");
-                }
-            } catch (error) {
-                formStatus.classList.remove("text-slate-400");
-                formStatus.classList.add("text-rose-400");
-                formStatus.textContent = "Oops! There was a problem sending your message.";
-            }
-        });
-    </script>
 </body>
 </html>
