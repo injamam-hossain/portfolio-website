@@ -4,8 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jisun Khan | Personal Portfolio</title>
+    <meta name="description" content="Portfolio of Jisun Khan, a Computer Science Engineering student focused on web development and modern web applications.">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .glass {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(10px);
+        }
+    </style>
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased">
 
@@ -13,26 +23,38 @@
     <header class="fixed top-0 left-0 w-full bg-slate-900/80 backdrop-blur-md z-50 border-b border-slate-800">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-xl font-bold text-blue-500">Jisun<span class="text-white">.dev</span></a>
-            <nav class="space-x-6 hidden md:block">
+            <nav class="space-x-6 hidden md:flex items-center">
                 <a href="#about" class="hover:text-blue-400 transition">About</a>
                 <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
                 <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
                 <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
             </nav>
+            <div class="hidden md:flex items-center gap-3">
+                <a href="https://github.com/injamam-hossain" target="_blank" rel="noreferrer" class="text-slate-300 hover:text-blue-400 transition">GitHub</a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" class="text-slate-300 hover:text-blue-400 transition">LinkedIn</a>
+            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="pt-32 pb-20 px-6 max-w-6xl mx-auto flex flex-col items-center text-center">
+        <div class="inline-flex items-center px-4 py-2 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-300 text-sm mb-6">
+            Available for web development opportunities
+        </div>
         <h1 class="text-4xl md:text-6xl font-extrabold mb-4">
             Hi, I'm <span class="text-blue-500">Jisun Khan</span>
         </h1>
         <p class="text-lg md:text-xl text-slate-400 max-w-2xl mb-8">
             Computer Science Engineering Student at State University of Bangladesh. Passionate about Web Development and building modern web applications.
         </p>
-        <div class="flex gap-4">
+        <div class="flex flex-wrap justify-center gap-4 mb-8">
             <a href="#contact" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold transition">Contact Me</a>
             <a href="#projects" class="bg-slate-800 hover:bg-slate-700 px-6 py-3 rounded-lg font-semibold border border-slate-700 transition">View Work</a>
+        </div>
+        <div class="flex flex-wrap justify-center gap-4 text-sm text-slate-300">
+            <a href="https://github.com/injamam-hossain" target="_blank" rel="noreferrer" class="hover:text-blue-400 transition">GitHub</a>
+            <a href="mailto:your.email@example.com" class="hover:text-blue-400 transition">Email</a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" class="hover:text-blue-400 transition">LinkedIn</a>
         </div>
     </section>
 
@@ -41,8 +63,76 @@
         <div class="max-w-4xl mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-8">About Me</h2>
             <p class="text-slate-300 leading-relaxed text-center">
-                I am a dedicated CSE student continuously enhancing my skills in Front-End & Full-Stack Web Development. I enjoy solving real-world problems and creating clean, responsive user interfaces.
+                I am a dedicated CSE student continuously enhancing my skills in Front-End & Full-Stack Web Development. I enjoy solving real-world problems and creating clean, responsive user interfaces that deliver meaningful experiences.
             </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 text-center">
+                    <p class="text-lg font-semibold text-blue-400">HTML5</p>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 text-center">
+                    <p class="text-lg font-semibold text-blue-400">CSS3</p>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 text-center">
+                    <p class="text-lg font-semibold text-blue-400">JavaScript</p>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 text-center">
+                    <p class="text-lg font-semibold text-blue-400">Tailwind CSS</p>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 text-center">
+                    <p class="text-lg font-semibold text-blue-400">React</p>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 text-center">
+                    <p class="text-lg font-semibold text-blue-400">Node.js</p>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 text-center">
+                    <p class="text-lg font-semibold text-blue-400">MongoDB</p>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 text-center">
+                    <p class="text-lg font-semibold text-blue-400">Git</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-slate-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-950 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:-translate-y-1 transition duration-200">
+                    <div class="h-40 bg-gradient-to-br from-blue-600 to-indigo-700"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Portfolio Website</h3>
+                        <p class="text-slate-400 mb-4">A personal portfolio built with HTML, Tailwind CSS, and modern responsive design.</p>
+                        <a href="#" class="text-blue-400 hover:text-blue-300">View Project →</a>
+                    </div>
+                </div>
+
+                <div class="bg-slate-950 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:-translate-y-1 transition duration-200">
+                    <div class="h-40 bg-gradient-to-br from-cyan-600 to-blue-700"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Business Landing Page</h3>
+                        <p class="text-slate-400 mb-4">Responsive business website focused on conversion, branding, and modern UI.</p>
+                        <a href="#" class="text-blue-400 hover:text-blue-300">View Project →</a>
+                    </div>
+                </div>
+
+                <div class="bg-slate-950 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:-translate-y-1 transition duration-200">
+                    <div class="h-40 bg-gradient-to-br from-violet-600 to-fuchsia-700"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Web App UI</h3>
+                        <p class="text-slate-400 mb-4">A clean user interface concept for a dashboard or SaaS application.</p>
+                        <a href="#" class="text-blue-400 hover:text-blue-300">View Project →</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
